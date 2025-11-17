@@ -28,7 +28,7 @@
 }
 
 .map__info {
-  background: linear-gradient(135deg, var(--color-primary), #a01a7a);
+  background: linear-gradient(135deg, #000, #333);
   padding: var(--spacing-md);
   color: var(--color-text-light);
   display: flex;
