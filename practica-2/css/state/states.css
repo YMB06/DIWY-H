@@ -1,0 +1,13 @@
+/* State Classes */
+.is-hidden {
+  display: none;
+}
+
+.is-active {
+  opacity: 1;
+}
+
+.is-loading {
+  pointer-events: none;
+  opacity: 0.5;
+}

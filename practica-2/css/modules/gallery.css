@@ -1,0 +1,17 @@
+/* Gallery - BEM */
+.gallery {
+  padding: var(--spacing-lg) 0;
+}
+
+.gallery__title {
+  text-align: center;
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.gallery__layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}

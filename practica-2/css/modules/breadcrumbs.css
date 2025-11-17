@@ -1,0 +1,37 @@
+/* Breadcrumbs - BEM con Flexbox */
+.breadcrumbs {
+  padding: var(--spacing-sm) 0;
+  background: var(--color-secondary);
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: '/';
+  margin: 0 var(--spacing-xs);
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.breadcrumbs__link {
+  color: var(--color-text);
+  transition: color 0.3s;
+}
+
+.breadcrumbs__link:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs__link--current {
+  color: var(--color-primary);
+  font-weight: 600;
+}

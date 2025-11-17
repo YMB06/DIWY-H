@@ -1,0 +1,27 @@
+/* Variables CSS y Breakpoints */
+:root {
+  --color-primary: #b91c8c;
+  --color-secondary: #fff;
+  --color-text: #333;
+  --color-text-light: #fff;
+  --color-bg: #f8f9fa;
+  --spacing-xs: 10px;
+  --spacing-sm: 20px;
+  --spacing-md: 30px;
+  --spacing-lg: 40px;
+  --border-radius: 8px;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+}
+
+/* Dark theme */
+body.dark-theme {
+  --color-secondary: #1a1a1a;
+  --color-text: #fff;
+  --color-bg: #121212;
+}
+
+/* Breakpoints: Mobile < 768px, Tablet 768-1024px, Desktop > 1024px */

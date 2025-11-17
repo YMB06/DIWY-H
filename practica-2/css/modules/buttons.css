@@ -1,0 +1,61 @@
+/* Buttons - BEM */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-family: inherit;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.btn--floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), #a01a7a);
+  color: var(--color-text-light);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(185, 28, 140, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn--floating:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(185, 28, 140, 0.4);
+}
+
+.theme-toggle {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #333;
+  right: 90px;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-4px) scale(1.05) rotate(15deg);
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+}
+
+.scroll-to-top {
+  font-size: 20px;
+}

@@ -1,0 +1,46 @@
+/* Layout Grid - Grid para layout principal, Flexbox para componentes */
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.l-main {
+  display: grid;
+  grid-template-areas: 
+    "nav"
+    "hero"
+    "breadcrumbs"
+    "gallery"
+    "video"
+    "carousel"
+    "map";
+  min-height: 100vh;
+}
+
+.l-grid {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.l-grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tablet: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .l-grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 767px) {
+  .l-container {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .l-grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+}

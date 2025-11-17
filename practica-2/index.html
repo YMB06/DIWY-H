@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Gourmet - Sabores Auténticos</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Layout principal con Grid -->
+    <div class="l-main">
+        <!-- Navegación -->
+        <nav class="nav" id="nav">
+            <div class="l-container">
+                <div class="nav__container">
+                    <div class="nav__brand">
+                        <h1>Bar Gourmet</h1>
+                    </div>
+                    <input type="checkbox" class="nav__toggle-input" id="nav-toggle">
+                    <label for="nav-toggle" class="nav__toggle">
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                    </label>
+                    <ul class="nav__menu" id="nav-menu">
+                        <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                        <li class="nav__item"><a href="#menu" class="nav__link">Menú</a></li>
+                        <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
+                        <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero con video parallax -->
+        <section class="hero" id="inicio">
+            <div class="hero__video">
+                <div class="hero__video-placeholder">🎥</div>
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="l-container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Bar Gourmet</h1>
+                    <p class="hero__subtitle">Sabores auténticos en el corazón de la ciudad</p>
+                    <button class="hero__cta btn btn--primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Ver Menú</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <div class="l-container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#inicio" class="breadcrumbs__link">Inicio</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link breadcrumbs__link--current">Menú</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Galería de Cards -->
+        <section class="gallery" id="menu">
+            <div class="l-container">
+                <h2 class="gallery__title">Nuestro Menú</h2>
+                <div class="gallery__layout">
+                    <article class="card card--large">
+                        <div class="card__image-placeholder">🍔</div>
+                        <h3 class="card__title">Especialidad de la Casa</h3>
+                        <p class="card__description">Hamburguesa Gourmet con carne angus, queso manchego y salsa especial</p>
+                        <span class="card__price">€12.50</span>
+                    </article>
+                    <div class="l-grid l-grid--4-cols">
+                        <article class="card card--small">
+                            <div class="card__image-placeholder">🍟</div>
+                            <h4 class="card__title">Tapas</h4>
+                            <p class="card__description">Bravas patatas</p>
+                            <span class="card__price">€4.50</span>
+                        </article>
+                        <article class="card card--small">
+                            <div class="card__image-placeholder">🍺</div>
+                            <h4 class="card__title">Bebidas</h4>
+                            <p class="card__description">Cerveza artesanal</p>
+                            <span class="card__price">€3.00</span>
+                        </article>
+                        <article class="card card--small">
+                            <div class="card__image-placeholder">🍰</div>
+                            <h4 class="card__title">Postres</h4>
+                            <p class="card__description">Tarta de queso</p>
+                            <span class="card__price">€5.00</span>
+                        </article>
+                        <article class="card card--small">
+                            <div class="card__image-placeholder">🥗</div>
+                            <h4 class="card__title">Ensaladas</h4>
+                            <p class="card__description">César con pollo</p>
+                            <span class="card__price">€8.50</span>
+                        </article>
+                    </div>
+                    <article class="card card--large">
+                        <div class="card__image-placeholder">🍽️</div>
+                        <h3 class="card__title">Menú del Día</h3>
+                        <p class="card__description">Primer plato, segundo plato, postre y bebida incluidos</p>
+                        <span class="card__price">€15.00</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video con parallax -->
+        <section class="video">
+            <div class="l-container">
+                <div class="video__container">
+                    <div class="video__placeholder">🎬</div>
+                    <div class="video__overlay">
+                        <div class="video__content">
+                            <h2>Experiencia Gastronómica Única</h2>
+                            <p>Descubre los sabores más auténticos en un ambiente acogedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel -->
+        <section class="carousel" id="galeria">
+            <div class="l-container">
+                <h2 class="carousel__title">Galería de Imágenes</h2>
+                <input type="radio" name="carousel" id="slide-0" checked>
+                <input type="radio" name="carousel" id="slide-1">
+                <input type="radio" name="carousel" id="slide-2">
+                <input type="radio" name="carousel" id="slide-3">
+                <input type="radio" name="carousel" id="slide-4">
+                <input type="radio" name="carousel" id="slide-5">
+                <div class="carousel__container">
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🍔</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🍟</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🍺</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🍰</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🥗</div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="carousel__placeholder">🍽️</div>
+                    </div>
+                </div>
+                <div class="carousel__indicators">
+                    <label for="slide-0" class="carousel__indicator"></label>
+                    <label for="slide-1" class="carousel__indicator"></label>
+                    <label for="slide-2" class="carousel__indicator"></label>
+                    <label for="slide-3" class="carousel__indicator"></label>
+                    <label for="slide-4" class="carousel__indicator"></label>
+                    <label for="slide-5" class="carousel__indicator"></label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa -->
+        <section class="map" id="contacto">
+            <div class="l-container">
+                <h2 class="map__title">Nuestra Ubicación</h2>
+                <div class="map__container">
+                    <iframe 
+                        class="map__iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4037!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicxMy42Ilc!5e0!3m2!1ses!2ses!4v1234567890123" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="map__info">
+                        <h3>📍 Bar Gourmet</h3>
+                        <p>📍 Calle Principal 123, Madrid</p>
+                        <p>📞 +34 123 456 789</p>
+                        <p>✉️ info@bargourmet.com</p>
+                        <p>🕒 Lun-Dom: 12:00-24:00</p>
+                        <p>🚗 Parking disponible</p>
+                        <p>♿ Acceso PMR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menú redes sociales -->
+    <div class="social-menu">
+        <a href="#" class="social-menu__link" title="Facebook">📘</a>
+        <a href="#" class="social-menu__link" title="Instagram">📷</a>
+        <a href="#" class="social-menu__link" title="Twitter">🐦</a>
+        <a href="#" class="social-menu__link" title="WhatsApp">💬</a>
+    </div>
+
+    <!-- Botón ir arriba -->
+    <a href="#inicio" class="btn btn--floating scroll-to-top" title="Ir arriba">
+        ↑
+    </a>
+</body>
+</html>

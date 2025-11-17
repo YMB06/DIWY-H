@@ -1,0 +1,25 @@
+/* SMACSS Architecture */
+/* Base */
+@import 'base/reset.css';
+@import 'base/typography.css';
+
+/* Layout */
+@import 'layout/grid.css';
+
+/* Modules */
+@import 'modules/navigation.css';
+@import 'modules/hero.css';
+@import 'modules/breadcrumbs.css';
+@import 'modules/card.css';
+@import 'modules/gallery.css';
+@import 'modules/video.css';
+@import 'modules/carousel.css';
+@import 'modules/map.css';
+@import 'modules/social.css';
+@import 'modules/buttons.css';
+
+/* State */
+@import 'state/states.css';
+
+/* Theme */
+@import 'theme/variables.css';
