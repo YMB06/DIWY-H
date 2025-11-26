@@ -1,0 +1,37 @@
+// Breadcrumbs - BEM con Sass
+.breadcrumbs {
+  padding: $spacing-sm 0;
+  background: $color-secondary;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 $spacing-xs;
+      color: $color-text;
+      opacity: 0.5;
+    }
+  }
+
+  &__link {
+    color: $color-text;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--current {
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+}

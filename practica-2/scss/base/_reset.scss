@@ -1,0 +1,26 @@
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $color-bg;
+  transition: all 0.3s ease;
+  
+  &.dark-theme {
+    background: $dark-color-bg;
+    color: $dark-color-text;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
