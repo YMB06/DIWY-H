@@ -1,0 +1,17 @@
+// Gallery - BEM con Sass
+.gallery {
+  padding: $spacing-lg 0;
+
+  &__title {
+    text-align: center;
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}

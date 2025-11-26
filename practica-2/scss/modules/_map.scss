@@ -1,0 +1,63 @@
+// Map - BEM con Sass
+.map {
+  padding: $spacing-lg 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+
+  &__title {
+    text-align: center;
+    font-size: $font-size-3xl;
+    color: $color-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $spacing-md;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    background: $color-secondary;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+
+    @include tablet {
+      height: 350px;
+    }
+
+    @include mobile {
+      height: 300px;
+    }
+  }
+
+  &__info {
+    background: linear-gradient(135deg, #000, #333);
+    padding: $spacing-md;
+    color: $color-text-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-sm;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: $spacing-xs;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+  }
+}

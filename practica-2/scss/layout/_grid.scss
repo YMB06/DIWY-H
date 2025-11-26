@@ -1,0 +1,42 @@
+// Layout Grid - Grid para layout principal, Flexbox para componentes
+.l-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+}
+
+.l-main {
+  display: grid;
+  grid-template-areas: 
+    "nav"
+    "hero"
+    "breadcrumbs"
+    "gallery"
+    "video"
+    "carousel"
+    "map";
+  min-height: 100vh;
+}
+
+.l-grid {
+  display: grid;
+  gap: $spacing-sm;
+
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include mobile {
+  .l-container {
+    padding: 0 $spacing-xs;
+  }
+}

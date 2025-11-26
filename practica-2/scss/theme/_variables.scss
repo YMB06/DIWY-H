@@ -1,0 +1,47 @@
+// Variables Sass
+$color-primary: #000;
+$color-secondary: #fff;
+$color-text: #333;
+$color-text-light: #fff;
+$color-bg: #f8f9fa;
+
+$spacing-xs: 10px;
+$spacing-sm: 20px;
+$spacing-md: 30px;
+$spacing-lg: 40px;
+
+$border-radius: 8px;
+
+$font-size-base: 1rem;
+$font-size-lg: 1.2rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.5rem;
+
+// Breakpoints
+$mobile: 767px;
+$tablet: 1024px;
+
+// Dark theme variables
+$dark-color-secondary: #1a1a1a;
+$dark-color-text: #fff;
+$dark-color-bg: #121212;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet + 1px}) {
+    @content;
+  }
+}

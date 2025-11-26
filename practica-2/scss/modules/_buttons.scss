@@ -1,0 +1,62 @@
+// Buttons - BEM con Sass
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-family: inherit;
+
+  &--primary {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+  }
+
+  &--floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.theme-toggle {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #333;
+  right: 90px;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.05) rotate(15deg);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.scroll-to-top {
+  font-size: 20px;
+}
