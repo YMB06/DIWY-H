@@ -35,7 +35,9 @@
         <!-- Hero con video parallax -->
         <section class="hero" id="inicio">
             <div class="hero__video">
-                <div class="hero__video-placeholder">🎥</div>
+                <video class="hero__video-bg" autoplay muted loop>
+                    <source src="images/hamburguesa.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="hero__overlay"></div>
             <div class="l-container">
@@ -114,7 +116,9 @@
         <section class="video">
             <div class="l-container">
                 <div class="video__container">
-                    <div class="video__placeholder">🎬</div>
+                    <video class="video__bg" autoplay muted loop>
+                        <source src="images/hamburguesa.mp4" type="video/mp4">
+                    </video>
                     <div class="video__overlay">
                         <div class="video__content">
                             <h2>Experiencia Gastronómica Única</h2>
@@ -203,5 +207,7 @@
     <a href="#inicio" class="btn btn--floating scroll-to-top" title="Ir arriba">
         ↑
     </a>
+    
+    <script src="js/parallax.js"></script>
 </body>
 </html>
