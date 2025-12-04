@@ -6,18 +6,55 @@ html, body {
     min-height: 100vh; 
 }
 
+header {
+    background-color: #3a3a3a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+/* Menú horizontal básico */
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2vh 3vh;
+    transition: background-color 0.3s;
+}
+
+/*Estructura del grid de la pagina*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     grid-template-rows: repeat(18, 1fr); 
     gap: 1vh; 
- 
     width: 100%; 
-    /* ocupa toda la altura del cuerpo */
     height: 100vh; 
     box-sizing: border-box; 
     padding: 1vh; 
+    padding-top: 6vh;
     background-color: #f0f0f0; 
 }
 
@@ -36,6 +73,62 @@ html, body {
 .item-1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 6;
+}
+
+.blog-post {
+    background-color: white;
+    color: #333;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 2vh;
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.1);
+}
+
+.blog-image {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.blog-content h2 {
+    margin: 0 0 1vh 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.blog-date {
+    color: #666;
+    font-size: 0.7em;
+    margin: 0 0 1vh 0;
+}
+
+.blog-content p {
+    font-size: 0.75em;
+    line-height: 1.3;
+    margin: 0 0 1vh 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+.read-more {
+    color: #b042f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.7em;
+    align-self: flex-start;
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
 .item-10 {
     grid-column: 3 / span 2; 
@@ -94,3 +187,4 @@ html, body {
     grid-column: 4 / span 1; 
     grid-row: 16 / span 3; 
 }
+
