@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0.5vh 2vh;
     z-index: 10;
 }
 
@@ -31,14 +31,14 @@ header h1 {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 2vh;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 3px;
+    width: 3vh;
+    height: 0.5vh;
     background-color: white;
-    margin: 3px 0;
+    margin: 0.5vh 0;
     transition: 0.3s;
 }
 
@@ -62,40 +62,103 @@ header h1 {
     transition: background-color 0.3s;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a:focus {
     background-color: #555;
+    outline: 0.3vh solid #b042f0;
+    outline-offset: 0.3vh;
 }
 
-/* Responsive para móvil */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 60px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 60px);
-        background-color: #3a3a3a;
+.hamburger:focus {
+    outline: 0.3vh solid #b042f0;
+    outline-offset: 0.3vh;
+}
+
+footer {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 6vh 3vh 3vh;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 194vh;
+    margin: 0 auto;
+    gap: 6.5vh;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    margin-bottom: 2.5vh;
+    color: #b042f0;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1vh;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section ul li a:hover,
+.footer-section ul li a:focus {
+    color: #b042f0;
+    outline: 0.1vh solid #b042f0;
+    outline-offset: 0.2vh;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5vh;
+}
+
+.fa-brands {
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s;
+}
+
+.fa-brands:hover,
+.social-icons a:focus .fa-brands {
+    color: #b042f0;
+}
+
+.social-icons a:focus {
+    outline: 0.3vh solid #b042f0;
+    outline-offset: 0.3vh;
+    border-radius: 0.6vh;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 5vh;
+    padding-top: 3vh;
+    border-top: 0.1vh solid #555;
+    font-size: 0.8em;
+    color: #ccc;
+}
+
+@media (max-width: 125vh) {
+    .footer-content {
         flex-direction: column;
-        transition: right 0.3s ease;
-        padding-top: 20px;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-menu a {
-        padding: 20px;
-        border-bottom: 1px solid #555;
+        gap: 2vh;
     }
 }
 
@@ -185,6 +248,51 @@ header h1 {
 .read-more:hover {
     text-decoration: underline;
 }
+
+/* Paginador */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    margin: 5vh 0;
+    padding: 0 3vh;
+}
+
+.pagination-btn,
+.pagination-number {
+    display: inline-block;
+    padding: 1vh 2vh;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    border: 0.1vh solid #ddd;
+    border-radius: 0.6vh;
+    transition: all 0.3s;
+}
+
+.pagination-btn:hover,
+.pagination-number:hover,
+.pagination-btn:focus,
+.pagination-number:focus {
+    background-color: #b042f0;
+    color: white;
+    outline: 0.3vh solid #b042f0;
+    outline-offset: 0.3vh;
+}
+
+.pagination-number.active {
+    background-color: #b042f0;
+    color: white;
+    border-color: #b042f0;
+}
+
+.pagination-dots {
+    color: #666;
+    padding: 1vh 0.5vh;
+}
+
+
 .item-10 {
     grid-column: 3 / span 2; 
     grid-row: 7 / span 6;
@@ -300,7 +408,7 @@ header h1 {
         grid-row: 19 / span 6;
     }
 
-      .item-11 {
+    .item-11 {
         grid-column: 1 / span 1;
         grid-row: 19 / span 3;
     }
@@ -313,8 +421,6 @@ header h1 {
         grid-row: 25 / span 6; 
     }
     
- 
-  
     .item-14 { 
         grid-column: 3 / span 1; 
         grid-row: 25 / span 3; 
@@ -343,6 +449,43 @@ header h1 {
         min-height: 15vh;
     }
 
-
+.hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 8vh;
+        right: -100%;
+        width: 100%;
+        height: auto;
+        background-color: #3a3a3a;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        padding-top: 4vh;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu a {
+        padding: 4vh;
+        border-bottom: 0.1vh solid #555;
+    }
+      .pagination {
+        gap: 0.5vh;
+    }
+    
+    .pagination-btn,
+    .pagination-number {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
 }
 
