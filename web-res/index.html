@@ -10,18 +10,17 @@
     <header>
         <h1>Blog</h1>
     <nav class="navbar" aria-label="Navegación principal">
-
-        <!-- Boton de Hamburguesa -->
-
-
-        <!-- Menu Principal (Horizontal)-->
-        <ul class="nav-menu">
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
             <li class="nav-item"><a href="#">Inicio</a></li>
             <li class="nav-item"><a href="#">Galeria</a></li>
             <li class="nav-item"><a href="#">Cositas</a></li>
-            <li class="nav-item"><a href="#">FOrmulario</a></li>
+            <li class="nav-item"><a href="#">Formulario</a></li>
         </ul>
-
     </nav>
     </header>
     <main>
@@ -52,5 +51,6 @@
     </div>
     </main>
     <footer></footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

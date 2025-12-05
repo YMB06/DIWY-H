@@ -24,6 +24,24 @@ header h1 {
     margin: 0;
 }
 
+/* Botón hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
 /* Menú horizontal básico */
 .nav-menu {
     padding: 0;
@@ -42,6 +60,43 @@ header h1 {
     text-decoration: none;
     padding: 2vh 3vh;
     transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #3a3a3a;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        padding-top: 20px;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu a {
+        padding: 20px;
+        border-bottom: 1px solid #555;
+    }
 }
 
 /*Estructura del grid de la pagina*/
