@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estructura de Diseño con Grid</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Blog</h1>
-    <nav class="navbar" aria-label="Navegación principal">
-        <button class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+      <h1>Blog</h1>
+      <nav class="navbar" aria-label="Navegación principal">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
-        <ul class="nav-menu" id="navMenu">
-            <li class="nav-item"><a href="#">Inicio</a></li>
-            <li class="nav-item"><a href="#">Galeria</a></li>
-            <li class="nav-item"><a href="#">Cositas</a></li>
-            <li class="nav-item"><a href="#">Formulario</a></li>
+        <ul class="nav-menu" id="navMenu" role="menu">
+          <li class="nav-item" role="none"><a href="#" role="menuitem">Inicio</a></li>
+          <li class="nav-item" role="none"><a href="#" role="menuitem">Galería</a></li>
+          <li class="nav-item" role="none"><a href="#" role="menuitem">Cositas</a></li>
+          <li class="nav-item" role="none"><a href="#" role="menuitem">Formulario</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
     <main>
-    <div class="grid-container">
+      <div class="grid-container">
         <article class="grid-item item-1 blog-post">
-            <img src="./images/hombre.jpg" alt="Programación" class="blog-image">
-            <div class="blog-content">
-                <h2>Introducción a CSS Grid</h2>
-                <p class="blog-date">15 de Enero, 2024</p>
-                <p>CSS Grid revoluciona la forma en que creamos layouts web. Con esta poderosa herramienta podemos crear diseños complejos de manera sencilla...</p>
-                <a href="#" class="read-more">Leer más</a>
-            </div>
+          <img
+            src="./images/hombre.jpg"
+            alt="Programación"
+            class="blog-image"
+          />
+          <div class="blog-content">
+            <h2>Introducción a CSS Grid</h2>
+            <p class="blog-date">15 de Enero, 2024</p>
+            <p>
+              CSS Grid revoluciona la forma en que creamos layouts web. Con esta
+              poderosa herramienta podemos crear diseños complejos de manera
+              sencilla...
+            </p>
+            <a href="#" class="read-more">Leer más</a>
+          </div>
         </article>
         <article class="grid-item item-2 blog-post">
             <img src="./images/gabriel.jpg" alt="Diseño Web" class="blog-image">
@@ -160,10 +172,56 @@
         <div class="grid-item item-13">13</div>
         <div class="grid-item item-14">14</div>
         <div class="grid-item item-15">15</div>
-    </div>
+      </div>
+      
+      <nav class="pagination" aria-label="Navegación de páginas">
+        <a href="#" class="pagination-btn" aria-label="Página anterior">&laquo;</a>
+        <a href="#" class="pagination-number active" aria-current="page">1</a>
+        <a href="#" class="pagination-number">2</a>
+        <a href="#" class="pagination-number">3</a>
+        <span class="pagination-dots">...</span>
+        <a href="#" class="pagination-number">10</a>
+        <a href="#" class="pagination-btn" aria-label="Página siguiente">&raquo;</a>
+      </nav>
     </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Acerca del Blog</h4>
+          <p>Un blog en el que hacemos cualquier cosa 
+            menos ser seres productivos en la vida.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Enlaces Rápidos</h4>
+          <nav aria-label="Enlaces legales">
+            <ul>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Términos de Uso</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Síguenos</h4>
+          <nav aria-label="Redes sociales">
+            <div class="social-icons">
+              <a href="#" aria-label="Visitar nuestro Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Visitar nuestro Twitter"><i class="fa-brands fa-x" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Visitar nuestro YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+              <a href="#" aria-label="Visitar nuestro TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+      </div>
     <footer>
     </footer>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
