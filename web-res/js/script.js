@@ -1,11 +1,26 @@
-//funcion para abrir y cerrar el menu de hamburguesa para dispositivos moviles
 function toggleMenu() {
     const navMenu = document.getElementById('navMenu');
-    const hamburger = document.querySelector('.hamburger');
-    const isOpen = navMenu.classList.contains('active');
-    
     navMenu.classList.toggle('active');
-    hamburger.setAttribute('aria-expanded', !isOpen);
-    hamburger.setAttribute('aria-label', !isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
 }
 
+function expandArticle(event) {
+    event.preventDefault();
+    const article = event.target.closest('.blog-post');
+    const readMoreBtn = event.target;
+    
+    if (article.classList.contains('expanded')) {
+        article.classList.remove('expanded');
+        readMoreBtn.textContent = 'Leer más';
+    } else {
+        article.classList.add('expanded');
+        readMoreBtn.textContent = 'Leer menos';
+    }
+}
+
+// Añadir event listeners cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreLinks = document.querySelectorAll('.read-more');
+    readMoreLinks.forEach(link => {
+        link.addEventListener('click', expandArticle);
+    });
+});
