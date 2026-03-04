@@ -71,6 +71,12 @@
   transform: translateY(-2px);
 }
 
+.nav__link--active {
+  color: var(--color-primary);
+  background: rgba(185, 28, 140, 0.15);
+  font-weight: 700;
+}
+
 /* Mobile */
 @media (max-width: 767px) {
   .nav__toggle {
