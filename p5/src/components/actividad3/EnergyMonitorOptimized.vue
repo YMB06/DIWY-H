@@ -6,23 +6,29 @@ const amplitude = ref(50)
 const frequency = ref(0.02)
 let offset = 0
 let animationId: number | null = null
+let cachedGradient: CanvasGradient | null = null
+
+const createGradient = (ctx: CanvasRenderingContext2D, width: number) => {
+  if (!cachedGradient) {
+    cachedGradient = ctx.createLinearGradient(0, 0, width, 0)
+    cachedGradient.addColorStop(0, '#00ff00')
+    cachedGradient.addColorStop(0.5, '#00ffff')
+    cachedGradient.addColorStop(1, '#00ff00')
+  }
+  return cachedGradient
+}
 
 const draw = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
   ctx.clearRect(0, 0, width, height)
   
-  // Crear gradiente una sola vez y reutilizar
-  const gradient = ctx.createLinearGradient(0, 0, width, 0)
-  gradient.addColorStop(0, '#00ff00')
-  gradient.addColorStop(0.5, '#00ffff')
-  gradient.addColorStop(1, '#00ff00')
+  const gradient = createGradient(ctx, width)
   
   ctx.beginPath()
   ctx.lineWidth = 3
   ctx.strokeStyle = gradient
-  ctx.shadowBlur = 10
-  ctx.shadowColor = '#00ff00'
   
-  for (let x = 0; x < width; x++) {
+  // Reducido a 300 puntos (cada 2px) para mejor rendimiento
+  for (let x = 0; x < width; x += 2) {
     const y = height / 2 + Math.sin(x * frequency.value + offset) * amplitude.value
     if (x === 0) ctx.moveTo(x, y)
     else ctx.lineTo(x, y)
@@ -48,12 +54,13 @@ onUnmounted(() => {
   if (animationId !== null) {
     cancelAnimationFrame(animationId)
   }
+  cachedGradient = null
 })
 </script>
 
 <template>
   <div class="energy-container">
-    <h3>Monitor de Consumo Energético</h3>
+    <h3>Monitor de Consumo Energético (Optimizado)</h3>
     <canvas ref="canvasRef" class="energy-canvas"></canvas>
     <div class="controls">
       <div class="control-group">

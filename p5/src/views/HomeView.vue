@@ -5,10 +5,13 @@ import SyncStatus from '../components/actividad1/SyncStatus.vue'
 import SecurityAlert from '../components/actividad1/SecurityAlert.vue'
 import WeatherWidget from '../components/actividad2/WeatherWidget.vue'
 import EnergyMonitor from '../components/actividad3/EnergyMonitor.vue'
+import BrowserCapabilities from '../components/BrowserCapabilities.vue'
 </script>
 
 <template>
   <main>
+    <BrowserCapabilities />
+    
     <div class="smart-home-view">
       <h1>🏠 Smart Home Control Panel</h1>
       

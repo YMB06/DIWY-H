@@ -45,6 +45,7 @@ const isNight = ref<boolean>(false)
   top: 4px;
   left: 4px;
   transition: transform 0.4s ease;
+  will-change: transform;
 }
 
 .toggle.night .toggle-circle {

@@ -48,5 +48,6 @@ const intensity = ref<number>(50)
 .bulb-icon {
   font-size: 3em;
   transition: transform 0.3s ease, filter 0.3s ease;
+  will-change: transform, filter;
 }
 </style>

@@ -19,6 +19,11 @@ const router = createRouter({
       name: 'smart-home',
       component: () => import('../views/SmartHomeView.vue'),
     },
+    {
+      path: '/landing',
+      name: 'landing',
+      component: () => import('../views/LandingView.vue'),
+    },
   ],
 })
 
