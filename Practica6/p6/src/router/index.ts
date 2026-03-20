@@ -9,6 +9,16 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue')
     },
     {
+      path: '/ej1',
+      name: 'ejercicio1',
+      component: () => import('../views/Ejercicio1View.vue')
+    },
+    {
+      path: '/ej2',
+      name: 'ejercicio2',
+      component: () => import('../views/Ejercicio2View.vue')
+    },
+    {
       path: '/ej3',
       name: 'ejercicio3',
       component: () => import('../views/Ejercicio3View.vue')

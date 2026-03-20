@@ -8,6 +8,8 @@ import { RouterView } from 'vue-router'
       <div class="nav-brand">📦 Práctica 6 - Vue Avanzado</div>
       <div class="nav-links">
         <RouterLink to="/">🏠 Inicio</RouterLink>
+        <RouterLink to="/ej1">🛠️ Ej1: StreamDeck</RouterLink>
+        <RouterLink to="/ej2">☕ Ej2: Barista</RouterLink>
         <RouterLink to="/ej3">✈️ Ej3: Baggage</RouterLink>
         <RouterLink to="/ej4">📦 Ej4: Packaging</RouterLink>
         <RouterLink to="/ej5">🏗️ Ej5: Warehouse</RouterLink>
@@ -30,6 +32,7 @@ body {
 
 #app {
   min-height: 100vh;
+  width: 100%;
 }
 
 .main-nav {
