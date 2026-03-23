@@ -71,11 +71,10 @@ function onScroll() {
   docHeight.value = document.documentElement.scrollHeight - window.innerHeight
 }
 
-// progress: 0 → 1 basado en la zona de scroll de la sticky scene
-// La sticky scene ocupa 100vh, el scroll-space añade 300vh de recorrido
+
 const progress = computed(() => Math.min(1, Math.max(0, scrollY.value / (docHeight.value * 0.75))))
 
-// Sincronizar frame de Lottie con el scroll
+
 let lastFrame = -1
 function syncLottie() {
   if (!lottie || totalFrames === 0) return
