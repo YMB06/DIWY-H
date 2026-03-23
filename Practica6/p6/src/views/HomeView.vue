@@ -7,6 +7,45 @@
 
     <div class="exercises">
       <div class="exercise-card">
+        <div class="exercise-icon">🎛️</div>
+        <h2>Ejercicio 1</h2>
+        <h3>Stream Deck Dashboard</h3>
+        <p>Panel de control con detección de capacidades del sistema y dashboard interactivo.</p>
+        <ul>
+          <li>✅ Detección de WebGL, codec, batería y conexión</li>
+          <li>✅ Componentes condicionales con Vue 3</li>
+          <li>✅ TypeScript con tipos personalizados</li>
+        </ul>
+        <RouterLink to="/ej1" class="btn">Ver Ejercicio 1 →</RouterLink>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-icon">☕</div>
+        <h2>Ejercicio 2</h2>
+        <h3>Barista Landing</h3>
+        <p>Página de aterrizaje para una cafetería con componentes Vue reutilizables.</p>
+        <ul>
+          <li>✅ Componentes Vue modulares</li>
+          <li>✅ Diseño responsive</li>
+          <li>✅ Integración de librerías externas</li>
+        </ul>
+        <RouterLink to="/ej2" class="btn">Ver Ejercicio 2 →</RouterLink>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-icon">🧳</div>
+        <h2>Ejercicio 3</h2>
+        <h3>Baggage Control</h3>
+        <p>Sistema de control de equipaje con gestión de estado reactivo.</p>
+        <ul>
+          <li>✅ Gestión de estado con Vue 3</li>
+          <li>✅ Componentes reactivos</li>
+          <li>✅ Control de flujo de datos</li>
+        </ul>
+        <RouterLink to="/ej3" class="btn">Ver Ejercicio 3 →</RouterLink>
+      </div>
+
+      <div class="exercise-card">
         <div class="exercise-icon">📦</div>
         <h2>Ejercicio 4</h2>
         <h3>Diseñador de Packaging B2B</h3>
