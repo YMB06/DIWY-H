@@ -16,26 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 const cardRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          gsap.from(cardRef.value, {
-            duration: 1,
-            y: 50,
-            rotation: 5,
-            opacity: 0,
-            ease: 'back.out(1.7)',
-            delay: props.delay,
-          })
-          observer.unobserve(entry.target)
-        }
-      })
-    },
-    { threshold: 0.2 }
-  )
-
-  if (cardRef.value) observer.observe(cardRef.value)
+  // La animación la gestiona el componente padre (LandingPage)
 })
 </script>
 
@@ -54,7 +35,6 @@ onMounted(() => {
   padding: 30px;
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 280px;
   display: flex;
   flex-direction: column;

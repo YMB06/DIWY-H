@@ -59,12 +59,13 @@ onMounted(() => {
             opacity: 0,
             ease: 'back.out(1.7)',
             stagger: 0.2,
+            clearProps: 'rotation',
           })
           observer.unobserve(entry.target)
         }
       })
     },
-    { threshold: 0.2 }
+    { threshold: 0 }
   )
 
   if (featuresRef.value) observer.observe(featuresRef.value)

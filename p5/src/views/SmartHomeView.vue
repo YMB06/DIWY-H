@@ -5,6 +5,8 @@ import SyncStatus from '../components/actividad1/SyncStatus.vue'
 import SecurityAlert from '../components/actividad1/SecurityAlert.vue'
 import WeatherWidget from '../components/actividad2/WeatherWidget.vue'
 import EnergyMonitor from '../components/actividad3/EnergyMonitor.vue'
+import LandingPage from '../components/actividad4/LandingPage.vue'
+import BrowserCapabilities from '../components/BrowserCapabilities.vue'
 </script>
 
 <template>
@@ -29,6 +31,16 @@ import EnergyMonitor from '../components/actividad3/EnergyMonitor.vue'
     <section class="activity-section">
       <h2>Actividad 3: Monitor de Consumo Energético con Canvas</h2>
       <EnergyMonitor />
+    </section>
+
+    <section class="activity-section">
+      <h2>Actividad 4: Landing Page con GSAP</h2>
+      <LandingPage />
+    </section>
+
+    <section class="activity-section">
+      <h2>Actividad 5: Auditoría de Rendimiento</h2>
+      <BrowserCapabilities />
     </section>
   </div>
 </template>
